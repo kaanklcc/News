@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Arka plan rengi için item -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#000000" /> <!-- Arka plan rengi -->
+        </shape>
+    </item>
+    <!-- Border için item -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#58C5F6" /> <!-- İç dolgu rengi (opsiyonel) -->
+            <stroke
+                android:width="4dp"
+                android:color="#000000" /> <!-- Border rengi ve kalınlığı -->
+            <corners android:radius="8dp"/> <!-- Köşeleri yuvarlaklaştırma -->
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/newsListFragment">
+
+    <fragment
+        android:id="@+id/newsListFragment"
+        android:name="com.kaankilic.news.view.NewsListFragment"
+        android:label="fragment_news_list"
+        tools:layout="@layout/fragment_news_list" >
+        <action
+            android:id="@+id/action_newsListFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.kaankilic.news.view.NewsDetailFragment"
+        android:label="fragment_news_detail"
+        tools:layout="@layout/fragment_news_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_newsDetailFragment_to_newsFavouriteFragment"
+            app:destination="@id/newsFavouriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFavouriteFragment"
+        android:name="com.kaankilic.news.view.NewsFavouriteFragment"
+        android:label="fragment_news_favourite"
+        tools:layout="@layout/fragment_news_favourite" >
+        <action
+            android:id="@+id/action_newsFavouriteFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+        <argument
+            android:name="ID"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsSearchFragment"
+        android:name="com.kaankilic.news.view.NewsSearchFragment"
+        android:label="fragment_news_search"
+        tools:layout="@layout/fragment_news_search" >
+        <action
+            android:id="@+id/action_newsSearchFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+</navigation>
